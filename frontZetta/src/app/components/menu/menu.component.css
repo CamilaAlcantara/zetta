@@ -1,0 +1,26 @@
+.texto1 {
+  font-size: 23px;
+}
+
+.navbarPersonalizada {
+  background-color: black;
+  color: white;
+}
+
+.botaoMenu {
+  position: relative;
+  left: 8px;
+  background-color: black;
+  border-color: black;
+}
+
+.p-button:enabled:hover {
+  background: #b8b894;
+  color: black;
+  border-color: #b8b894;
+}
+.p-button:enabled:active {
+  background: #b8b894;
+  color: black;
+  border-color: #b8b894;
+}
