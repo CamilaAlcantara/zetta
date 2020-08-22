@@ -1,0 +1,22 @@
+.botaoAdicionar{
+  position: relative;
+  left: 15px;
+}
+.titulo{
+  position: relative;
+  left: 15px;
+  top: -10px;
+  width: 90%;
+}
+.linha{
+  width: 98%;
+  position: relative;
+  top: -20px;
+}
+.tabela{
+  width: 86%;
+  position: relative;
+  left: 175px;
+  top: -40px;
+
+}

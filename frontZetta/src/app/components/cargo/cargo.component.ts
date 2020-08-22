@@ -9,7 +9,17 @@ export class CargoComponent implements OnInit {
 
   constructor() { }
 
+  listaItens: any[];
   ngOnInit() {
   }
 
+  adicionar(){
+
+  }
+  editar(id){
+
+  }
+  excluir(cargo){
+
+  }
 }
