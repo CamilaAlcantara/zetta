@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zettaApp.apiZetta.models.Perfil;
 import com.zettaApp.apiZetta.models.Pessoa;
-import com.zettaApp.apiZetta.repository.PerfilRepository;
 import com.zettaApp.apiZetta.repository.PessoaRepository;
 
 

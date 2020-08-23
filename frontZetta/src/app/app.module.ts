@@ -13,7 +13,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
@@ -76,6 +76,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     SidebarModule,
     PanelMenuModule,
     HttpClientModule,
+    HttpClientJsonpModule,
+
 
     AngularFontAwesomeModule
 
