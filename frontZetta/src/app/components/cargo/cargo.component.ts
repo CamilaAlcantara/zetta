@@ -45,10 +45,23 @@ export class CargoComponent implements OnInit {
     .then(response=>{
       this.listaItens = response;
       this.mensagem.showTopCenter('Cargo cadastrado com sucesso', TipoMensagem.sucesso);
+      this.pesquisar();
+      this.cargoDescricao = null;
     })
   }
   editar(id){
+    this.cargo = new Cargo();
+    this.cargo = id;
+    this.cargo.nome = this.cargoDescricao;
+    this.cargo.ativo = true;
 
+    this.service.alterar(this.cargo)
+    .then(response=>{
+      this.listaItens = response;
+      this.mensagem.showTopCenter('Cargo alterado com sucesso', TipoMensagem.sucesso);
+      this.pesquisar();
+      this.cargoDescricao = null;
+    })
   }
   excluir(cargo){
 

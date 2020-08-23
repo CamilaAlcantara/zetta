@@ -80,14 +80,13 @@ import { MessageService } from 'primeng/api';
     PanelMenuModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    MensagemComponent,
-    MessageService,
-
-
     AngularFontAwesomeModule
 
   ],
-  providers: [],
+  providers: [
+    MessageService,
+    MensagemComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
