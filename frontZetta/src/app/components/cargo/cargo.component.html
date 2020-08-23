@@ -1,4 +1,5 @@
 <app-menu></app-menu>
+<app-mensagem ></app-mensagem>
 <h1 style="font-weight:normal" class="titulo">Cadastro de cargo</h1>
 <hr class="linha"/>
 <div class="ui-g">
@@ -6,7 +7,7 @@
     <!----CAMPO PARA DIGITAR O CARGO  ----------------------->
   <div class="ui-g-12 ui-sm-12 ui-fluid">
     <span class="ui-float-label">
-        <input type="text" class="inputDescricao" name="cargo" pInputText placeholder="Cargo" [(ngModel)]="cargo" />
+        <input type="text" class="inputDescricao" name="cargo" pInputText placeholder="Cargo" [(ngModel)]="cargoDescricao" />
         <label class=" labelDescricao" [hidden]="cargo ? false : true">Cargo</label>
     </span>
 </div>
@@ -70,7 +71,7 @@
             <td class="tb-coluna-opcoes">
               <button class="btn-tabela" (click)="editar(t.id)" pButton icon="pi pi-pencil"
                   pTooltip="Editar" tooltipPosition="top"></button>
-              <button class="btn-tabela" (click)="excluir(t)" pButton icon="pi pi-trash"
+              <button class="botaoTabela" (click)="excluir(t)" pButton icon="pi pi-trash"
                   pTooltip="Excluir" tooltipPosition="top"></button>
           </td>
           </tr>

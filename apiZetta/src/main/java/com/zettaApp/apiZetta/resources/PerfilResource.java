@@ -28,12 +28,12 @@ public class PerfilResource {
 	
 	
 	@GetMapping("/listar")
-	public List<Perfil> ListarCargo(){
+	public List<Perfil> listar(){
 		return perfilRepository.findAll();
 	}
 	
 	@GetMapping("/buscarPorId/{id}")
-	public Optional<Perfil> BuscarPorId(@PathVariable("id") long id){
+	public Optional<Perfil> buscarPorId(@PathVariable("id") long id){
 	 		return this.perfilRepository.findById(id);
 	}
 	

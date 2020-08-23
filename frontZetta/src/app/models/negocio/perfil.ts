@@ -1,4 +1,4 @@
-export class Cargo {
+export class Perfil {
     id: number
     nome: string;
     ativo: boolean;

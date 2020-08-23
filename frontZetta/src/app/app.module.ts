@@ -35,6 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {BlockUIModule} from 'primeng/blockui';
 import {SidebarModule} from 'primeng/sidebar';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import { MensagemComponent } from './components/mensagem/mensagem.component';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     PerfilComponent,
     PessoaComponent,
     UsuarioComponent,
-    MenuComponent
+    MenuComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +80,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     PanelMenuModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    MensagemComponent,
+    MessageService,
 
 
     AngularFontAwesomeModule

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CargoService } from 'src/app/services/cargo.service';
+import { Cargo } from 'src/app/models/negocio/cargo';
+import { MensagemComponent } from '../mensagem/mensagem.component';
+import { TipoMensagem } from 'src/app/models/enum/tipoMensagem';
 
 @Component({
   selector: 'app-cargo',
@@ -9,11 +12,14 @@ import { CargoService } from 'src/app/services/cargo.service';
 export class CargoComponent implements OnInit {
 
   constructor(
-    private service: CargoService
+    private service: CargoService,
+    private mensagem: MensagemComponent
+
   ) { }
 
   listaItens: any[];
-  cargo: any;
+  cargo: Cargo;
+  cargoDescricao: any;
 
   ngOnInit() {
     this.listaItens = [];
@@ -30,8 +36,16 @@ export class CargoComponent implements OnInit {
   }
 
   adicionar(){
-    // this.listaItens = [];
-    this.listaItens.push(this.cargo);
+
+    this.cargo = new Cargo();
+    this.cargo.nome = this.cargoDescricao;
+    this.cargo.ativo = true;
+
+    this.service.incluir(this.cargo)
+    .then(response=>{
+      this.listaItens = response;
+      this.mensagem.showTopCenter('Cargo cadastrado com sucesso', TipoMensagem.sucesso);
+    })
   }
   editar(id){
 

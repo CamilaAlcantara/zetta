@@ -28,12 +28,12 @@ public class PessoaResource {
 	
 	
 	@GetMapping("/listar")
-	public List<Pessoa> ListarCargo(){
+	public List<Pessoa> listar(){
 		return pessoaRepository.findAll();
 	}
 	
 	@GetMapping("/buscarPorId/{id}")
-	public Optional<Pessoa> BuscarPorId(@PathVariable("id") long id){
+	public Optional<Pessoa> pesquisar(@PathVariable("id") long id){
 	 		return this.pessoaRepository.findById(id);
 	}
 	
