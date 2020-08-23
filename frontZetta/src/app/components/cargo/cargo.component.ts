@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CargoService } from 'src/app/services/cargo.service';
 
 @Component({
   selector: 'app-cargo',
@@ -7,14 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private service: CargoService
+  ) { }
 
   listaItens: any[];
+  cargo: any;
+
   ngOnInit() {
+    this.listaItens = [];
+
+    this.pesquisar();
+  }
+
+
+  pesquisar(){
+    this.service.listar()
+    .subscribe(response =>{
+      this.listaItens = response;
+    })
   }
 
   adicionar(){
-
+    // this.listaItens = [];
+    this.listaItens.push(this.cargo);
   }
   editar(id){
 

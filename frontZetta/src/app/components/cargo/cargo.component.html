@@ -2,12 +2,24 @@
 <h1 style="font-weight:normal" class="titulo">Cadastro de cargo</h1>
 <hr class="linha"/>
 <div class="ui-g">
+
+    <!----CAMPO PARA DIGITAR O CARGO  ----------------------->
+  <div class="ui-g-12 ui-sm-12 ui-fluid">
+    <span class="ui-float-label">
+        <input type="text" class="inputDescricao" name="cargo" pInputText placeholder="Cargo" [(ngModel)]="cargo" />
+        <label class=" labelDescricao" [hidden]="cargo ? false : true">Cargo</label>
+    </span>
+</div>
+    <!----BOTÃO ADICIONAR ---------------------------------->
   <div>
     <button
       pButton type="button" label="Adicionar"  (click)="adicionar()" class="botaoAdicionar"
     ></button>
   </div>
 
+  <!--------------------------------------------------------->
+  <!--GRID PRINCIPAL ---------------------------------------->
+  <!--------------------------------------------------------->
   <div class="ui-g-10 ui-sm-12 tabela" >
     <div class="ui-g-12 ui-sm-12">
       <p-table [value]="listaItens" [paginator]="true"  [rows]="15"  responsive="true"  [rowsPerPageOptions]="[15, 30, 60]"
@@ -15,7 +27,7 @@
         <ng-template pTemplate="header">
           <tr>
             <th class="tb-item-cabecario-data ; " style="width: 400px;"
-            > Descrição            </th>
+            > Descrição </th>
             <!-- <th class="tb-item-cabecario-cod ; " style="width: 20px;"
             > E/S
             </th>
@@ -66,4 +78,5 @@
       </p-table>
     </div>
   </div>
+
 </div>

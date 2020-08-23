@@ -75,6 +75,7 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     ProgressSpinnerModule,
     SidebarModule,
     PanelMenuModule,
+    HttpClientModule,
 
     AngularFontAwesomeModule
 
