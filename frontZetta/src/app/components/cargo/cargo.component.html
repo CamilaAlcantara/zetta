@@ -10,7 +10,7 @@
         <input type="text" class="inputDescricao" name="cargo" pInputText placeholder="Cargo" [(ngModel)]="cargoDescricao" />
         <label class=" labelDescricao" [hidden]="cargo ? false : true">Cargo</label>
     </span>
-</div>
+  </div>
     <!----BOTÃO ADICIONAR ---------------------------------->
   <div>
     <button
@@ -69,7 +69,7 @@
             <td class="tb-coluna-align-centro; "> {{ t.quantidade }} -->
             <!-- </td> -->
             <td class="tb-coluna-opcoes">
-              <button class="btn-tabela" (click)="editar(t.id)" pButton icon="pi pi-pencil"
+              <button class="btn-tabela" (click)="controlaModal(t.id)" pButton icon="pi pi-pencil"
                   pTooltip="Editar" tooltipPosition="top"></button>
               <button class="botaoTabela" (click)="excluir(t)" pButton icon="pi pi-trash"
                   pTooltip="Excluir" tooltipPosition="top"></button>
@@ -79,5 +79,50 @@
       </p-table>
     </div>
   </div>
+
+
+  <!--------------------------------------------------------------------->
+  <!-- MODAL EDITAR ------------------------------------------------------>
+  <!---------------------------------------------------------------------->
+
+  <div class="ui-g-12 ui-sm-12">
+    <p-dialog
+      header="Alterar cargo"
+      [(visible)]="modalEditar"
+      [modal]="true"
+      [responsive]="true"
+      [baseZIndex]="150"
+      [style]="{ width: '30%' }"
+    >
+      <div>
+          <!----CAMPO PARA DIGITAR O CARGO  ----------------------->
+          <div class="ui-g-12 ui-sm-12 ui-fluid">
+            <span class="ui-float-label">
+                <input type="text" class="inputDescricao" name="cargo" pInputText placeholder="Cargo" [(ngModel)]="cargoDescricaoModal" />
+                <label class=" labelDescricao" [hidden]="cargo ? false : true">Cargo</label>
+            </span>
+          </div>
+      </div>
+
+      <!--Botão Sim-->
+      <button
+        pButton
+        type="button"
+        label="Sim"
+        (click)="editar()"
+        style="width: 48%; margin-right: 12px; margin-top: 15px;"
+      ></button>
+
+      <!--Botão Não-->
+      <button
+        pButton
+        type="button"
+        label="Não"
+        (click)="modalEditar = false"
+        style="width: 48%;"
+      ></button>
+    </p-dialog>
+  </div>
+
 
 </div>

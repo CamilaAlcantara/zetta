@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.zettaApp.apiZetta.models.Usuario;
 import com.zettaApp.apiZetta.repository.UsuarioRepository;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -27,8 +26,13 @@ public class UsuarioResource {
 	
 	
 	@GetMapping("/listar")
-	public List<Usuario> listar(){
+	public List<Usuario> listarUsuario(){
 		return usuarioRepository.findAll();
+	}
+	
+	@GetMapping("/pesquisar")
+	public List<Usuario> listar(){
+		return usuarioRepository.getListar();
 	}
 	
 	@GetMapping("/buscarPorId/{id}")

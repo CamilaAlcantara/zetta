@@ -29,9 +29,13 @@ public class CargoResource {
 	public List<Cargo> ListarCargo(){
 		return cargoRepository.findAll();
 	}
+	@GetMapping("/pesquisar")
+	public List<Cargo> listar(){
+		return cargoRepository.getListar();
+	}
 	
 	@GetMapping("/buscarPorId/{id}")
-	public Optional<Cargo> BuscarPorId(@PathVariable("id") long id){
+	public Optional<Cargo> buscarPorId(@PathVariable("id") long id){
 	 		return this.cargoRepository.findById(id);
 	}
 	

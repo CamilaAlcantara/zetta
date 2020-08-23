@@ -8,13 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontZetta';
 
-    visibleSidebar1;
-
-    visibleSidebar2;
-
-    visibleSidebar3;
-
-    visibleSidebar4;
-
-    visibleSidebar5;
 }

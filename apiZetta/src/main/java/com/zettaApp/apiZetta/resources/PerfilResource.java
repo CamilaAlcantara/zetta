@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.zettaApp.apiZetta.models.Perfil;
 import com.zettaApp.apiZetta.repository.PerfilRepository;
 
@@ -28,9 +29,15 @@ public class PerfilResource {
 	
 	
 	@GetMapping("/listar")
-	public List<Perfil> listar(){
+	public List<Perfil> listarPerfil(){
 		return perfilRepository.findAll();
 	}
+	
+	@GetMapping("/pesquisar")
+	public List<Perfil> listar(){
+		return perfilRepository.getListar();
+	}
+	
 	
 	@GetMapping("/buscarPorId/{id}")
 	public Optional<Perfil> buscarPorId(@PathVariable("id") long id){

@@ -18,8 +18,11 @@ export class CargoService {
   ) { }
 
 
-  listar() {
+  listarCargo() {
     return this.http.get<Array<any>>(this.apiConexao + '/cargo/listar');
+  }
+  listar() {
+    return this.http.get<Array<any>>(this.apiConexao + '/cargo/pesquisar');
   }
 
   buscarId(id: any): Promise<any> {
@@ -36,11 +39,21 @@ export class CargoService {
 
 
   alterar(cargo: Cargo): Promise<any> {
-    return this.http.put(`${environment.apiUrl}/cargo/incluir`, cargo)
+    return this.http.put(`${environment.apiUrl}/cargo/alterar`, cargo)
       .toPromise()
       .catch(erro => Promise.reject(erro));
   }
 
+  // delete(cargo): Promise<any> {
+  //   return this.http.delete<void>(`${environment.apiUrl}/cargo/delete`, cargo)
+  //     .toPromise()
+  //     .catch(erro => Promise.reject(erro));
+  // }
 
+  delete(cargo: Cargo): Promise<any> {
+    return this.http.put(`${environment.apiUrl}/cargo/alterar`, cargo)
+      .toPromise()
+      .catch(erro => Promise.reject(erro));
+  }
 
 }
