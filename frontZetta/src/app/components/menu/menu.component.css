@@ -24,3 +24,12 @@
   color: black !important;
   border-color: #b8b894 !important;
 }
+
+
+.p-sidebar{
+  background-color: gray;
+}
+
+.body > app-root > app-menu > div > div > div > nav > p-sidebar{
+  background-color: gray;
+}

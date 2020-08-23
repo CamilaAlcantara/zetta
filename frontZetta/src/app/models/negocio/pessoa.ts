@@ -3,6 +3,6 @@ export class Pessoa {
     nome: string;
     cpf: string;
     sexo: string;
-    dataNascimento: Date;
+    dataNascimento: any;
     ativo: boolean;
 }

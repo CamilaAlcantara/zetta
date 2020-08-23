@@ -30,10 +30,10 @@ public class UsuarioResource {
 		return usuarioRepository.findAll();
 	}
 	
-	@GetMapping("/pesquisar")
-	public List<Usuario> listar(){
-		return usuarioRepository.getListar();
-	}
+//	@GetMapping("/pesquisar")
+//	public List<Usuario> listar(){
+//		return usuarioRepository.getListar();
+//	}
 	
 	@GetMapping("/buscarPorId/{id}")
 	public Optional<Usuario> buscarPorId(@PathVariable("id") long id){

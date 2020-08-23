@@ -1,5 +1,6 @@
 package com.zettaApp.apiZetta.resources;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,6 +44,7 @@ public class PessoaResource {
 	
 	@PostMapping("/incluir")
 	public Pessoa incluir(@RequestBody Pessoa entity) {
+		entity.setDataNascimento(LocalDate.now());
 		return this.pessoaRepository.save(entity);
 	}
 	

@@ -1,7 +1,7 @@
 package com.zettaApp.apiZetta.models;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,9 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
-@JsonFormat(pattern="yyyy-MM-dd")
+
+
 @Entity
 @Table(name="TB_PESSOA")
 public class Pessoa implements Serializable {
@@ -29,7 +29,7 @@ public class Pessoa implements Serializable {
 	@Column(name = "CPF")
 	private String cpf;
 	@Column(name = "DATA_NASCIMENTO")
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 	@Column(name = "SEXO")
 	private String sexo;
 	@Column(name = "ATIVO")
@@ -54,10 +54,10 @@ public class Pessoa implements Serializable {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getSexo() {

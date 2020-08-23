@@ -9,9 +9,9 @@ import com.zettaApp.apiZetta.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
-	@Query(value="select tb.* from TB_USUARIO tb " + 
-			"WHERE ATIVO = True "
-			+ " ORDER BY NOME ASC",nativeQuery = true)
-	public List<Usuario> getListar();
+//	@Query(value="select tb.* from TB_USUARIO tb " + 
+//			"WHERE ATIVO = True "
+//			+ " ORDER BY NOME ASC",nativeQuery = true)
+//	public List<Usuario> getListar();
 	
 }
