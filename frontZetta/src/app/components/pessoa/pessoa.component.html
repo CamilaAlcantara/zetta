@@ -53,7 +53,7 @@
             </td>
             <td class="tb-coluna-align-centro; "> {{ t.cpf }}
             </td>
-            <td class="tb-coluna-align-centro; "> {{ t.dataNascimento }}
+            <td class="tb-coluna-align-centro; "> {{ t.dataNascimento | date:'dd/MM/yyyy'}}
             </td>
             <td class="tb-coluna-opcoes">
               <button class="btn-tabela" (click)="controlaModal(t.id)" pButton icon="pi pi-pencil"

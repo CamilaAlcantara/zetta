@@ -44,7 +44,6 @@ public class PessoaResource {
 	
 	@PostMapping("/incluir")
 	public Pessoa incluir(@RequestBody Pessoa entity) {
-		entity.setDataNascimento(LocalDate.now());
 		return this.pessoaRepository.save(entity);
 	}
 	
